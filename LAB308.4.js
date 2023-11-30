@@ -43,3 +43,17 @@ for(let i = 0; i < objectArray.length; i++){
 }
 const averageAge = totalAge / objectArray.length; 
 console.log(averageAge);
+
+// Part 5: Full Circle
+csvData = '';
+const header = Object.keys(objectArray[0]);
+csvData += header.join(',') +'\n';
+
+objectArray.forEach((row) => {
+    let rowArray = [];
+    for(let key in row){
+     rowArray.push(row[key]);
+    }
+    csvData += rowArray.join(',') +'\n'
+})
+console.log(csvData)
