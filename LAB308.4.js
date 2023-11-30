@@ -6,3 +6,13 @@ for(let i = 0; i < dataArray.length; i++){
     row = dataArray[i].split(',');
     console.log(row);
 }
+
+//Part 2: Expanding Functionality 
+const testString2='ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26';
+let dataArray2 = testString2.split('\n')
+for(let i = 0; i < dataArray2.length; i++){
+    row = dataArray2[i].split(',');
+    dataArray2.splice(i,1,row)
+}
+// console.log(dataArray2)
+
